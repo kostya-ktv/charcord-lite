@@ -1,0 +1,25 @@
+<%-include('../Partials/header.ejs')%>
+
+<link rel='stylesheet' type='text/css' media='screen' href='/Views/ChatRoom/chatWindow.css'>
+    
+</head>
+<body>
+    <div>
+        <div>
+            <h1> ChatRoom</h1>
+            <ul class="list-messages">
+
+            </ul>
+        </div>
+        <div class="nameBlock"></div>
+        <form class="form">
+            <input type="text" class="inputText" name="inputText" required>
+            <input type="submit" class="sendButton" value="SEND">
+        </form>
+    </div>
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+    <script src="/Views/ChatRoom/client.js"></script>
+    
+</body>
+</html>
+

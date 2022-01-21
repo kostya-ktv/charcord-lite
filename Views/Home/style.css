@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Ubuntu;
+    src: url('/Assets/Fonts/UbuntuMono-Bold.ttf');
+}
+@font-face {
+    font-family: Dongle;
+    src: url('/Assets/Fonts/Dongle-Light.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Dongle;
+    font-size: 30px;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(24,99,85,1) 10%, rgb(28, 122, 69) 50%, rgba(24,99,85,1) 84%);
+}
+.container {
+    position: relative;
+    text-align: center;
+    padding: 2%;
+    background: rgba(0, 0, 0, 0.4);
+    width: 300px;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+}
+
