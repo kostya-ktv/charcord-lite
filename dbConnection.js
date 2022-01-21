@@ -10,12 +10,24 @@ const DB = knex({
       user: process.env.DBUSER,
       password: process.env.DBPASSWORD,
       database: process.env.DBDATABASE,
+      ssl: { rejectUnauthorized: false }
     }
   })
-  DB.schema.createTable('user', (table) => {
-    table.increments('id')
-    table.string('name')
-    table.integer('age')
-  })
-  module.exports = DB;
+// const createUser = async() => {
+//     return await DB('users').insert([
+//         {
+//             login: "kostya",
+//             password: "wqdqweg",
+//             email: "sgreh@ewg.ro",
+//             token: "e3r234r3fgr3gh"
+//         }
+//     ])
+// }
+// const getUsers = async() => {
+//     return await DB('users').select()
+// }
+// createUser();
+// getUsers().then(data => console.log(data));
+
+module.exports = DB;
   
