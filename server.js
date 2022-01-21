@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express'),
-
+      bodyParser = require('body-parser'),
       cors = require('cors'),
       app = express(),
       http = require('http'),
@@ -18,9 +18,12 @@ let connectedUsers = [],
 
 
 app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: false }))
 //ROUTES
 app.use('/', MainPageRouter);
 app.use('/login', AuthenticationRouter);
+app.use('/signup', AuthenticationRouter);
+
 //STATIC VALUES
 app.use("/Views", express.static('./Views/'));
 app.use("/Assets", express.static('./Assets/'));

@@ -2,16 +2,21 @@
 
 </head>
 <body>
+    
     <div class="container modal-window" id="modal-window">
         <p id="closeButton">X</p>
-        <form class="login-form" action="/login">
-            <input type="text" name="username" id="input-username" required placeholder="Your username...">
-            <input type="password" name="password" id="input-password" required placeholder="Your password...">
+        <form class="login-form">
+            <label>Login:</label>
+            <input type="text" name="username" id="input-username" required placeholder="...">
+            <label>Password:</label>
+            <input type="password" name="password" id="input-password" required placeholder="...">
             <input type="submit" name="submit" id="connectButton" value="Connect">
         </form>
     </div>
     <div class="container" id="mainWindow">
- 
+        <% if (typeof message == 'object' && message) { %>
+            <p id="alert-message"><%=message.text%></p>
+            <% } %>
         <p id="logo">CHAT<img width="70px" src="/Assets/logo.svg">CORD</p>
             <div class="btn" id="login_btn">
                Log in

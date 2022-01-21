@@ -71,14 +71,14 @@ a {
 }
 #login_btn:hover { 
     background-color: rgba(54, 128, 51, 0.6);
-    color: rgb(189, 185, 185);
+    color: rgb(255, 255, 255);
 }
 #signup_btn {
     background-color: rgba(44, 118, 187, 0.6);
 }
 #signup_btn:hover {
     background-color: rgba(36, 93, 146, 0.6);
-    color: rgb(189, 185, 185);
+    color: rgb(255, 255, 255);
 }
 
 .modal-window {
@@ -102,11 +102,12 @@ a {
     padding-right: 5%;
     top: -10%;
     left: 100%;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .modal-window p:hover {
     transform: scale(1.1);
     cursor: pointer;
+    color: white;
 }
 .login-form {
     display: flex;
@@ -114,21 +115,26 @@ a {
     align-items: center;
 }
 .login-form input {
+    background: rgba(185, 184, 184, 0.2);
     text-align: center;
-    margin: 1%;
     width: 100%;
     border-radius: 20px;
     border: none;
 }
+.login-form input:focus {
+    background-color: white;
+}
 #connectButton {
     margin-top: 3%;
-    width: 100px;
-    background-color: rgba(53, 156, 50, 0.6);
+
 }
 #connectButton:hover {
     cursor: pointer;
-    background-color: rgba(96, 255, 91, 0.6);
-    color: rgb(71, 70, 70);
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+}
+#alert-message {
+    
 }
 @keyframes showslide {
     0%{
