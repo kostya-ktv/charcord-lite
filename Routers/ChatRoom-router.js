@@ -1,4 +1,4 @@
-const ChatRoomRouter = require('express').Router();
+ const ChatRoomRouter = require('express').Router();
 
 ChatRoomRouter.get('/', (req, res) => {
     res.render('../Views/ChatRoom/chatroom.ejs')

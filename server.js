@@ -1,25 +1,26 @@
 require('dotenv').config();
 const express = require('express'),
-      bcryprt = require('bcrypt'),
+
+      cors = require('cors'),
       app = express(),
       http = require('http'),
       server = http.createServer(app),
       serverSocketIO = require('socket.io')(server),
       MainPageRouter = require('./Routers/MainPage-router'),
-      ChatRoomRouter = require('./Routers/Chatroom-router');
+      AuthenticationRouter = require('./Routers/Authentication-router')
 
 let connectedUsers = [],
     usersConnections =[];
 
 // const salt = await bcryprt.genSalt();
 // const hashedPassword = await bcryprt.hash(password, salt);
-// bcryprt.compare(password, hashedPassword);
+// bcryprt.compare(password, hashedPassw ord);
 
 
 app.set('view engine', 'ejs');
 //ROUTES
 app.use('/', MainPageRouter);
-app.use('/chatroom', ChatRoomRouter);
+app.use('/login', AuthenticationRouter);
 //STATIC VALUES
 app.use("/Views", express.static('./Views/'));
 app.use("/Assets", express.static('./Assets/'));
@@ -40,7 +41,7 @@ serverSocketIO.sockets.on('connection', (socket)=> {
     })
 });
 
-
+app.use('*', MainPageRouter)
 server.listen(process.env.PORT, () => {
     console.log(`SERVER IS LISTENING ON PORT : ${process.env.PORT}`);
 });

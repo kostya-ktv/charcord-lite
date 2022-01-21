@@ -5,6 +5,7 @@ const messages = document.querySelector('.list-messages'),
       nameBlock = document.querySelector('.nameBlock'),
       userName = prompt("YOUR NAME"),
       clientSocket = io('http://localhost:3000');
+      
 nameBlock.innerHTML = userName;
 form.addEventListener('submit', (e) => {
     e.preventDefault();

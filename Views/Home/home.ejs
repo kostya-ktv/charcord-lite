@@ -2,14 +2,28 @@
 
 </head>
 <body>
-    <div class="container">
-        <h1>CHATCORD</h1>
-        <h3>Log in</h3>
-        <a href = "http://localhost:3000/chatroom"><button type = 'submit'>Let's Go Home</button></a>
+    <div class="container modal-window" id="modal-window">
+        <p id="closeButton">X</p>
+        <form class="login-form" action="/login">
+            <input type="text" name="username" id="input-username" required placeholder="Your username...">
+            <input type="password" name="password" id="input-password" required placeholder="Your password...">
+            <input type="submit" name="submit" id="connectButton" value="Connect">
+        </form>
+    </div>
+    <div class="container" id="mainWindow">
+ 
+        <p id="logo">CHAT<img width="70px" src="/Assets/logo.svg">CORD</p>
+            <div class="btn" id="login_btn">
+               Log in
+            </div>
+            <div class="btn" id="signup_btn">
+               Sign up
+            </div>
     </div>
 
 
-
+<div class="footer">@2022 Kostya.ktv</div>
 <script src="/Views/Home/home.js" defer></script>
+    
 </body>
 </html>
