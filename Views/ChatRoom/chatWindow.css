@@ -1,3 +1,22 @@
+
+.chatWindow {
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    height: 80vh;
+    width: 60vw;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+#logo-head{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
 .list-messages {
     
+    background: rgba(197, 197, 197, 0.1);
+    list-style: none;
+    flex: 2;
 }

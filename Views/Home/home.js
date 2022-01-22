@@ -22,6 +22,7 @@ loginButton.addEventListener('click', ()=>{
     loginForm.action = '/login';
     loginForm.method = 'GET';
     loginForm.submit();
+    loginForm.reset();
 });
 
 signupButton.addEventListener('click', () => { 
@@ -33,5 +34,5 @@ signupButton.addEventListener('click', () => {
     loginForm.action = '/login';
     loginForm.method = 'POST';
     loginForm.submit();
-    
+    loginForm.reset();
 })

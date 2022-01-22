@@ -6,16 +6,20 @@
 <body>
     <div>
         <div>
-            <h1> ChatRoom</h1>
-            <ul class="list-messages">
+            <p id="logo-head">CHAT<img width="70px" src="/Assets/logo.svg">CORD</p>
+            <div class="container chatWindow">
+                <div class="nameBlock"><%=login%></div>
+                <ul class="list-messages">
 
-            </ul>
+                </ul>
+                <form class="form">
+                    <input type="text" class="inputText" name="inputText" required>
+                    <input type="submit" class="sendButton" value="SEND">
+                </form>
+            </div>
+        
         </div>
-        <div class="nameBlock"></div>
-        <form class="form">
-            <input type="text" class="inputText" name="inputText" required>
-            <input type="submit" class="sendButton" value="SEND">
-        </form>
+        
     </div>
     <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
     <script src="/Views/ChatRoom/client.js"></script>

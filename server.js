@@ -9,8 +9,6 @@ const express = require('express'),
       MainPageRouter = require('./Routers/MainPage-router'),
       AuthenticationRouter = require('./Routers/Authentication-router')
 
-let connectedUsers = [],
-    usersConnections =[];
 
 // const salt = await bcryprt.genSalt();
 // const hashedPassword = await bcryprt.hash(password, salt);
@@ -32,19 +30,18 @@ app.use("/Model", express.static('./Model/'));
 
 serverSocketIO.sockets.on('connection', (socket)=> {
     console.log("---SUCCESSFULL CONNECT---");
-    // usersConnections.push(socket);
 
     socket.on('chat-message', (data) => {
         serverSocketIO.emit('chat-message', {
             message: data.message,
             name: data.name
         })
-        // usersConnections.splice(usersConnections.indexOf(socket), 1);
-        console.log("---SUCCESSFULL DICSONECT---");
+ 
+        console.log("---MESSAGE SENT---");
     })
 });
 
-app.use('*', MainPageRouter)
+app.use('*', MainPageRouter);
 server.listen(process.env.PORT, () => {
     console.log(`SERVER IS LISTENING ON PORT : ${process.env.PORT}`);
 });

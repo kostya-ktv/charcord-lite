@@ -2,11 +2,10 @@ const messages = document.querySelector('.list-messages'),
       form = document.querySelector('.form'),
       inputText = document.querySelector('.inputText'),
       sendButton = document.querySelector('.sendButton'),
-      nameBlock = document.querySelector('.nameBlock'),
-      userName = prompt("YOUR NAME"),
+      userName = document.querySelector('.nameBlock').innerHTML,
       clientSocket = io('http://localhost:3000');
       
-nameBlock.innerHTML = userName;
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     if(inputText.value){
