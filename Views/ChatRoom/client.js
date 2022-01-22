@@ -37,7 +37,6 @@ clientSocket.on('chat-message', (data) => {
     }   
     messages.append(item);
     
-    console.log("sda");
     //scroll to end UL
     
     messages.scrollBy(0, messages.scrollHeight);
