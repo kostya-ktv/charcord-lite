@@ -36,7 +36,8 @@ AuthenticationRouter.get('/', async (req, res) => {
 AuthenticationRouter.post('/', async(req, res) => {
 
     let user = new User(req.body.username, req.body.password );
-    await createUser(req.body.username, req.body.password)
+
+    await createUser(user)
     //in both cases registation successful/unsuccsessful, redirect to home page with current alert
         .then(data => {
             message.text = 'Successful registration';

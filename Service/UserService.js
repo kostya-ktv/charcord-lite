@@ -14,7 +14,7 @@ const createUser = async(user) => {
     let hashPassword = await bcryprt.hash(user.password, salt);
     return await DB('users').insert([
         {
-            login: login,
+            login: user.login,
             password: hashPassword,
         }
     ]);
