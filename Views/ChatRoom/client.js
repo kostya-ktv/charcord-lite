@@ -3,6 +3,7 @@ const messages = document.querySelector('.list-messages'),
       inputText = document.querySelector('.inputText'),
       sendButton = document.querySelector('.sendButton'),
       userName = document.querySelector('.nameBlock div').innerText,
+      alertSound = new Audio('/Assets/new-message.mp3'),
     //   clientSocket = io('http://localhost:3000');
       clientSocket = io('https://chatcord-lite.herokuapp.com');
 //SWITCH URL!!  FOR RUN APP ON HEROKU     
@@ -32,9 +33,13 @@ clientSocket.on('chat-message', (data) => {
     //else styles for out users message
         item.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'
         item.innerHTML = `<strong>${data.name}</strong>: ${data.message}`;
+        alertSound.play();
     }   
     messages.append(item);
+    
+    console.log("sda");
     //scroll to end UL
+    
     messages.scrollBy(0, messages.scrollHeight);
 })
 
@@ -46,6 +51,7 @@ clientSocket.on('join', (e) => {
     item.style.color = 'grey';
     item.innerHTML = e;
     messages.append(item);
+    alertSound.play();
     messages.scrollBy(0, messages.scrollHeight);
 })
 
