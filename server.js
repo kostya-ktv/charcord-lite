@@ -9,12 +9,6 @@ const express = require('express'),
       MainPageRouter = require('./Routers/MainPage-router'),
       AuthenticationRouter = require('./Routers/Authentication-router')
 
-
-// const salt = await bcryprt.genSalt();
-// const hashedPassword = await bcryprt.hash(password, salt);
-// bcryprt.compare(password, hashedPassw ord);
-
-
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }))
 //ROUTES
@@ -42,6 +36,7 @@ serverSocketIO.sockets.on('connection', (socket)=> {
 });
 
 app.use('*', MainPageRouter);
+
 server.listen(process.env.PORT, () => {
     console.log(`SERVER IS LISTENING ON PORT : ${process.env.PORT}`);
 });

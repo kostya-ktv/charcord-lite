@@ -1,5 +1,6 @@
 const DB = require('../dbConnection');
 const bcryprt = require('bcryptjs');
+
 let salt = '';
 
 const createUser = async(login, password) => {
@@ -7,7 +8,6 @@ const createUser = async(login, password) => {
         salt = await bcryprt.genSalt(1);
     }
     let hashPassword = await bcryprt.hash(password, salt);
-
     return await DB('users').insert([
         {
             login: login,

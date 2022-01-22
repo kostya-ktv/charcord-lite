@@ -8,12 +8,15 @@
         <div>
             <p id="logo-head">CHAT<img width="70px" src="/Assets/logo.svg">CORD</p>
             <div class="container chatWindow">
-                <div class="nameBlock"><%=login%></div>
+                <div class="nameBlock">
+                    <img src="/Assets/avatar.svg" width="30px" style="margin-right: 10px;">
+                    <div><%=login%></div>
+                </div>
                 <ul class="list-messages">
 
                 </ul>
                 <form class="form">
-                    <input type="text" class="inputText" name="inputText" required>
+                    <input type="text" class="inputText" name="inputText" placeholder="Type message...">
                     <input type="submit" class="sendButton" value="SEND">
                 </form>
             </div>
