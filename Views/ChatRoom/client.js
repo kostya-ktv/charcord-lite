@@ -4,8 +4,8 @@ const messages = document.querySelector('.list-messages'),
       sendButton = document.querySelector('.sendButton'),
       userName = document.querySelector('.nameBlock div').innerText,
       alertSound = new Audio('/Assets/new-message.mp3'),
-      clientSocket = io('http://localhost:3000');
-    //   clientSocket = io('https://chatcord-lite.herokuapp.com');
+    //   clientSocket = io('http://localhost:3000');
+      clientSocket = io('https://chatcord-lite.herokuapp.com');
 //SWITCH URL!!  FOR RUN APP ON HEROKU     
 //Message sending
 form.addEventListener('submit', (e) => {
