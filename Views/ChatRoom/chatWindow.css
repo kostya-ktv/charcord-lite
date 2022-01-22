@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     top: 10%;
-    height: 80vh;
+    min-height: 80vh;
+    max-height: 80vh;
     width: 60vw;
     padding: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -26,8 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
-    
+    overflow-y: scroll;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -37,7 +37,7 @@
     font-size: 0.7rem;
 }
 .inputText {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: white;
     padding-left: 5px;
     font-weight: 400;
@@ -52,7 +52,7 @@
     font-size: 0.8rem;
     position: absolute;
     right: 2%;
-    bottom: 1%;
+    bottom: 5px;
     background-color: rgb(65, 126, 59);
     padding-left: 6px;
     padding-right: 6px;
@@ -64,5 +64,12 @@
 .sendButton:hover {
     cursor: pointer;
     background-color: rgb(45, 87, 41);
-}
 
+}
+.message {
+    background-color: rgb(65, 126, 59);
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}

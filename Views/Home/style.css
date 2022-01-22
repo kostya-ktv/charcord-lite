@@ -135,8 +135,7 @@ a {
 }
 #alert-message {
     border-radius: 20px;
-    background-color: chartreuse;
-    
+    background-color: rgb(201, 214, 18); 
 }
 @keyframes showslide {
     0%{

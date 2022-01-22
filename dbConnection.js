@@ -1,7 +1,7 @@
 const knex = require('knex');
 require('dotenv').config();
 
-
+//CONNECTION TO OUR DB
 const DB = knex({
     client:'pg',
     connection:{
